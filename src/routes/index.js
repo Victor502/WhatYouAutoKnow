@@ -1,1 +1,2 @@
 // Routes Folder
+"use strict";

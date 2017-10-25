@@ -1,1 +1,2 @@
 // Models folder
+"use strict";
