@@ -9,7 +9,9 @@ const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
 
-
+app.get( '/' , (req, res) => {
+   res.send(); 
+});
 
 app.listen(config.port, function() {
   console.log(`${config.appName} is listening on port ${config.port}`);
