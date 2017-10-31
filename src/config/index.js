@@ -1,4 +1,4 @@
-// Config folder
+// Config folder/index.js
 "use strict";
 
 module.exports = {

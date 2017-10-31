@@ -10,7 +10,7 @@ app.use(express.static(publicPath));
 
 
 app.get( '/' , (req, res) => {
-   res.send(); 
+   res.render('index'); 
 });
 
 app.listen(config.port, function() {
