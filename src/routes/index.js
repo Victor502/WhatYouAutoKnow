@@ -2,35 +2,7 @@
 const router = require('express').Router();
 const mongoose = require('mongoose');
 
-const FILES = [
-    {
-        id: 'a',
-        title: 'cutecat1.jpg',
-        description: 'A cute cat'
-    },
-    {
-        id: 'b',
-        title: 'uglycat1.jpg',
-        description: 'Just kidding, all cats are cute'
-    },
-    {
-        id: 'c',
-        title: 'total_recall_poster.jpg',
-        description: 'Quaid, start the reactor...'
-    },
-    {
-        id: 'd',
-        title: 'louisville_coffee.txt',
-        description: 'Coffee shop ratings'
-    },
-];
-
-router.use('/doc', function (req, res, next) {
-    res.end(`Documentation http://expressjs.com/`);
-});
-
-
-
+// 
 router.get('/file', function(req, res, next) {
   mongoose.model('File').find({deleted: {$ne: true}}, function(err, files) {
     if (err) {
@@ -42,7 +14,7 @@ router.get('/file', function(req, res, next) {
   });
 });
 
-
+//post comment
 router.post('/file', function (req, res, next) {
     const File = mongoose.model('File');
     const fileData = {
@@ -91,6 +63,7 @@ router.put('/file/:fileId', function (req, res, next) {
     })
 });
 
+//deletes comment
 router.delete('/file/:fileId', function(req, res, next) {
   const File = mongoose.model('File');
   const fileId = req.params.fileId;
@@ -113,7 +86,7 @@ router.delete('/file/:fileId', function(req, res, next) {
   })
 });
 
-
+//
 router.get('/file/:fileId', function (req, res, next) {
     //res.end(`Reading file '${req.params.fileId}'`);
     const {

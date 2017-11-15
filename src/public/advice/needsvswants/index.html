@@ -41,15 +41,20 @@
 </nav>
    </header>
    <div class="container text-center">
+   <div class="my-5">
+            <a class="btn btn-primary text-white" href="../../login/">Sign-in</a>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#signUpModal">Sign-up</button>
+        </div>
     <h1>Needs vs. Wants</h1>
 <div>
     <p class="lead"><i>Needs vs. Wants </i>- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur justo tellus, faucibus eget leo eget, suscipit dignissim metus. Curabitur eu est feugiat massa ultricies dapibus. Fusce tempus, ligula vitae sollicitudin aliquam, libero ipsum convallis nisi, ac ornare libero nunc a ex. Quisque blandit consequat velit, nec pretium lectus maximus et. Praesent sem mauris, hendrerit quis interdum id, mollis vel nisi.</p><p class="lead"> Morbi tellus orci, sollicitudin et augue vitae, semper pellentesque nisi. Sed cursus ultricies erat, at faucibus arcu fringilla et. Sed dignissim leo sit amet finibus feugiat. Vivamus sed suscipit velit. Pellentesque nec lectus sit amet nunc pretium interdum. Donec maximus purus non aliquet pellentesque. Sed lectus eros, mattis quis venenatis id, ultricies id urna. Donec ac lacus nisi. Nunc finibus consequat mi. In eget pellentesque massa.</p>
 </div>
     
     <div class="container">
-        <div id="list-container"></div>
+        <div id="list-container" class="my-5"></div>
         
-        <button id="add-file-button" class="btn btn-primary" onclick="toggleAddFileForm()">Add File</button>
+        
+        <button id="add-file-button" class="btn btn-primary" onclick="toggleAddFileForm()">Add Comment</button>
 
         <div id="form-container" class="panel hidden">
             <form id="add-file-form">
@@ -87,6 +92,45 @@
     </script>
 
       </div>
+          <!-- Modal -->
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign-up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="mt-5">
+          <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10 col-md-8 col-md-6">
+              <input type="email" class="form-control" id="name" placeholder="Name">
+            </div>
+          </div>
+           <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10 col-md-8 col-md-6">
+              <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group row ">
+            <label for="password" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10 col-md-8 col-md-6">
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Sign-in</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"

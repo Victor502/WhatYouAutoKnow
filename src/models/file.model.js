@@ -2,6 +2,7 @@
 // Load mongoose package
 const mongoose = require('mongoose');
 
+//file schema
 const FileSchema = new mongoose.Schema({
     title: String,
     description: String,

@@ -1,3 +1,4 @@
+// seed data if database doesn't connect
 [
   {"title":"SUV", "description": "Do I really need a Mini-van" },
   {"title":"Full size sedan", "description": "Do I really need a ful size sedan?" },
