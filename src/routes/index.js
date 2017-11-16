@@ -168,11 +168,11 @@ router.put('/comment/:fileId', function (req, res, next) {
 });
 
 //deletes comment
-router.delete('/file/:fileId', function(req, res, next) {
-  const File = mongoose.model('File');
+router.delete('/comment/:fileId', function(req, res, next) {
+  const Comment = mongoose.model('Comment');
   const fileId = req.params.fileId;
 
-  File.findById(fileId, function(err, file) {
+  Comment.findById(fileId, function(err, file) {
     if (err) {
       console.log(err);
       return res.status(500).json(err);
@@ -181,9 +181,9 @@ router.delete('/file/:fileId', function(req, res, next) {
       return res.status(404).json({message: "File not found"});
     }
 
-    file.deleted = true;
+    Comment.deleted = true;
 
-    file.save(function(err, doomedFile) {
+    Comment.save(function(err, doomedFile) {
       res.json(doomedFile);
     })
 
@@ -191,7 +191,7 @@ router.delete('/file/:fileId', function(req, res, next) {
 });
 
 //Gets commment for editing
-router.get('/file/:fileId', function (req, res, next) {
+router.get('/comment/:fileId', function (req, res, next) {
     //res.end(`Reading file '${req.params.fileId}'`);
     const {
         fileId
