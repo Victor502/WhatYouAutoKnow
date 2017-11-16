@@ -4,8 +4,6 @@ const mongoose = require('mongoose');
 
 //file schema2
 const FileSchema2 = new mongoose.Schema({
-    title: String,
-    description: String,
     comment: String,
     created_at: {
         type: Date,
@@ -22,14 +20,14 @@ const Comment = mongoose.model('Comment', FileSchema);
 
 module.exports = Comment;
 
-File.count({}, function (err, count) {
+Comment.count({}, function (err, count) {
     if (err) {
         throw err;
     }
     if (count > 0) return;
 
-    const files = require('./file.seed.json');
-    File.create(files, function (err, newFiles) {
+    const comments = require('./file.seed.json');
+    Comment.create(comments, function (err, newFiles) {
         if (err) {
             throw err;
         }

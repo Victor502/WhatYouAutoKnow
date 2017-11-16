@@ -16,6 +16,7 @@ mongoose.connection.openUri(config.db.uri);
 
 // Import all models
 require('./models/file.model.js');
+require('./models/comment.model.js');
 
 
 const app = express();
