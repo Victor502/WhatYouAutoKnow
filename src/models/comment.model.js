@@ -1,11 +1,12 @@
-//file.model.js
+//comment.model.js
 // Load mongoose package
 const mongoose = require('mongoose');
 
-//file schema
-const FileSchema = new mongoose.Schema({
+//file schema2
+const FileSchema2 = new mongoose.Schema({
     title: String,
     description: String,
+    comment: String,
     created_at: {
         type: Date,
         default: Date.now
@@ -17,9 +18,9 @@ const FileSchema = new mongoose.Schema({
 });
 
 
-const File = mongoose.model('File', FileSchema);
+const Comment = mongoose.model('Comment', FileSchema);
 
-module.exports = File;
+module.exports = Comment;
 
 File.count({}, function (err, count) {
     if (err) {
