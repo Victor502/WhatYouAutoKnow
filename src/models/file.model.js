@@ -16,6 +16,21 @@ const FileSchema = new mongoose.Schema({
     }
 });
 
+const FileSchema1 = new mongoose.Schema({
+    title: String,
+    description: String,
+    comment: String,
+    created_at: {
+        type: Date,
+        default: Date.now
+    },
+    deleted: {
+        type: Boolean,
+        default: false
+    }
+});
+
+
 const File = mongoose.model('File', FileSchema);
 
 module.exports = File;
