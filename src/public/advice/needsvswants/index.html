@@ -14,7 +14,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="../../index.html">
     <img src="../../img/Car.png" width="30" height="30" class="d-inline-block align-top" alt="">
     What You Auto Know
   </a>
@@ -42,23 +42,20 @@
             </div>
         </nav>
     </header>
-    <div class="container text-center">
+    <div class="container">
         <div class="my-5">
             <a class="btn btn-primary text-white" href="../../login/">Sign-in</a>
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#signUpModal">Sign-up</button>
         </div>
         <h1>Needs vs. Wants</h1>
-        <div>
+        <div class="text-center">
             <p class="lead"><i>Needs vs. Wants </i>- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur justo tellus, faucibus eget leo eget, suscipit dignissim metus. Curabitur eu est feugiat massa ultricies dapibus. Fusce tempus, ligula vitae sollicitudin aliquam, libero ipsum convallis nisi, ac ornare libero nunc a ex. Quisque blandit consequat velit, nec pretium lectus maximus et. Praesent sem mauris, hendrerit quis interdum id, mollis vel nisi.</p>
             <p class="lead"> Morbi tellus orci, sollicitudin et augue vitae, semper pellentesque nisi. Sed cursus ultricies erat, at faucibus arcu fringilla et. Sed dignissim leo sit amet finibus feugiat. Vivamus sed suscipit velit. Pellentesque nec lectus sit amet nunc pretium interdum. Donec maximus purus non aliquet pellentesque. Sed lectus eros, mattis quis venenatis id, ultricies id urna. Donec ac lacus nisi. Nunc finibus consequat mi. In eget pellentesque massa.</p>
         </div>
 
         <div class="container">
             <div id="list-container" class="my-5"></div>
-
-
-            <button id="add-file-button" class="btn btn-primary" onclick="toggleAddFileForm()">Add Comment</button>
-
+            <button id="add-file-button" class="btn btn-primary mb-3" onclick="toggleAddFileForm()">Add Comment</button>
             <div id="form-container" class="panel hidden">
                 <form id="add-file-form">
 
@@ -85,8 +82,8 @@
                 {{#each files}}
                 <li class="list-group-item">
                     <strong>{{title}}</strong> - {{description}}
-                    <span class="pull-right">
-                    <button type="button" class="btn btn-xs btn-default" onclick="editFileClick('{{_id}}')">Edit</button>
+                    <span class="float-right">
+                    <button type="button" class="btn btn-xs btn-secondary mx-1" onclick="editFileClick('{{_id}}')">Edit</button>
                     <button type="button" class="btn btn-xs btn-danger" onclick="deleteFileClick('{{_id}}')">Del</button>
                 </span>
                 </li>
